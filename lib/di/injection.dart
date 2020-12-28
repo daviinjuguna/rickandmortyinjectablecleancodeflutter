@@ -12,7 +12,7 @@ final getIt = GetIt.instance;
   preferRelativeImports: true, // default
   asExtension: false, // default
 )
-configureDependencies(String environment) => $initGetIt(getIt,environment: environment);
+configureDependencies() => $initGetIt(getIt);
 
 abstract class Env {
   static const dev = 'dev';

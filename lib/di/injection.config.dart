@@ -7,15 +7,15 @@
 import 'package:get_it/get_it.dart';
 import 'package:injectable/injectable.dart';
 
-import 'database/app_database.dart';
-import 'features/presentation/bloc/character_bloc.dart';
-import 'database/character/character_dao.dart';
-import 'features/data/data_source/api/character_service.dart';
-import 'features/domain/usecases/get_all_characters.dart';
-import 'features/domain/usecases/get_character.dart';
-import 'features/data/data_source/local/local_data_source.dart';
-import 'features/data/data_source/remote/remote_data_source.dart';
-import 'features/data/repository/repository.dart';
+import '../database/app_database.dart';
+import '../features/presentation/bloc/character_bloc.dart';
+import '../database/character/character_dao.dart';
+import '../features/data/data_source/api/character_service.dart';
+import '../features/domain/usecases/get_all_characters.dart';
+import '../features/domain/usecases/get_character.dart';
+import '../features/data/data_source/local/local_data_source.dart';
+import '../features/data/data_source/remote/remote_data_source.dart';
+import '../features/data/repository/repository.dart';
 
 /// adds generated dependencies
 /// to the provided [GetIt] instance

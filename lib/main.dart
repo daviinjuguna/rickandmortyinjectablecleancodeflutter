@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:rickandmorty/di/injection.dart';
 import 'package:rickandmorty/features/presentation/pages/character_page.dart';
-import 'package:rickandmorty/injection.dart';
 import 'package:logging/logging.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  configureDependencies(Env.dev);
+  configureDependencies();
   _setUpLogging();
   runApp(MyApp());
 }

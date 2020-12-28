@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:rickandmorty/di/injection.dart';
 import 'package:rickandmorty/features/domain/entities/character.dart';
 import 'package:rickandmorty/features/presentation/bloc/character_bloc.dart';
 import 'package:rickandmorty/features/presentation/pages/character_details_page.dart';
-import 'package:rickandmorty/injection.dart';
 
 class CharacterPage extends StatefulWidget {
   @override
