@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:rickandmorty/core/routes/argument_holders.dart';
 import 'package:rickandmorty/di/injection.dart';
 import 'package:rickandmorty/features/domain/entities/character.dart';
 import 'package:rickandmorty/features/presentation/bloc/character_bloc.dart';
@@ -61,10 +62,11 @@ class _CharacterPageState extends State<CharacterPage> {
                 padding: EdgeInsets.only(left: 10, top: 20),
                 itemBuilder: (context, index) => GestureDetector(
                   onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => CharacterDetailsPage(character: character[index],)),
+                    Navigator.of(context).pushNamed(
+                      '/details',
+                      arguments: CharacterDetailsPageArguments(
+                        character: character[index],
+                      ),
                     );
                   },
                   child: Container(
@@ -75,8 +77,7 @@ class _CharacterPageState extends State<CharacterPage> {
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         CircleAvatar(
-                          backgroundImage: NetworkImage(
-                              character[index].image),
+                          backgroundImage: NetworkImage(character[index].image),
                           radius: 40,
                         ),
                         SizedBox(
