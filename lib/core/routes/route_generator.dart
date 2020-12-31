@@ -11,7 +11,7 @@ class RouteGenerator {
     switch (settings.name) {
       case '/':
         return MaterialPageRoute(builder: (_) => CharacterPage());
-      case '/detail':
+      case '/details':
         //validate arguments
         if (args is CharacterDetailsPageArguments) {
           return MaterialPageRoute(
