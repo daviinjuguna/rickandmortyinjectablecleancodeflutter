@@ -14,6 +14,7 @@ abstract class Repository {
   Future<Either<String, Character>> getCharacter(int id);
 }
 
+
 @LazySingleton(as: Repository)
 class RepositoryImpl implements Repository {
   final LocalDataSource local;
@@ -57,7 +58,7 @@ class RepositoryImpl implements Repository {
     }
   }
 
-  //Failure message checker
+  //Failure message checker =>
   String _returnFailure(final exception) {
     if (exception is ServerException) {
       return SERVER_FAILURE_MESSAGE;

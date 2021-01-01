@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:rickandmorty/core/routes/route_generator.dart';
 import 'package:rickandmorty/di/injection.dart';
-import 'package:rickandmorty/features/presentation/pages/character_page.dart';
 import 'package:logging/logging.dart';
 
 void main() {

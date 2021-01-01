@@ -14,8 +14,19 @@ class RouteGenerator {
       case '/details':
         //validate arguments
         if (args is CharacterDetailsPageArguments) {
-          return MaterialPageRoute(
-            builder: (_) => CharacterDetailsPage(character: args.character),
+          return PageRouteBuilder(
+            pageBuilder: (context, animation, secondaryAnimation) => CharacterDetailsPage(character: args.character),
+            transitionsBuilder:
+                (context, animation, secondaryAnimation, child) {
+              return SlideTransition(
+                position: Tween<Offset>(
+                  begin: const Offset(-1.0, 0.0),
+                  end: Offset.zero,
+                ).animate(animation),
+                child: FadeTransition(opacity: animation, child: child),
+              );
+            },
+            transitionDuration: const Duration(milliseconds: 25),
           );
         }
         return _errorRoute();
